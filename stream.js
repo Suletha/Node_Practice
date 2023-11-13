@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+//read and write Large Data
+
 const rs = fs.createReadStream(path.join(__dirname,'youtube', 'bigfile.txt'),{encoding: 'utf-8'})
 const ws = fs.createWriteStream(path.join(__dirname,'youtube', 'new_bigfule.txt'));
 
