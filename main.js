@@ -12,7 +12,13 @@ console.log("i will be executed first")
 fs.writeFile(path.join(__dirname,'youtube','write.txt'), 'welcome to node ja', (err) => {
   if (err) throw err;
   console.log("write operation successful!!!!");
+  // To update file
+  fs.appendFile(path.join(__dirname,'youtube','write.txt'), '\n\n welcome to node ja', (err) => {
+    if (err) throw err;
+    console.log("updated successful!!!!");
+  })
 })
+
 
 
 process.on('uncaughtException', (err) => {
