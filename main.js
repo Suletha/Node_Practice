@@ -20,6 +20,8 @@ const fileOpe = async () => {
     //To rename the file
     await fspromises.rename(path.join(__dirname,'youtube','append.txt'), path.join(__dirname,'youtube','rename.txt'))
     console.log("renamed successful!!!!");
+    //To delete a file
+    await fspromises.unlink(path.join(__dirname,'youtube','write.txt'))
   
     }catch(err){
       console.log(err)
