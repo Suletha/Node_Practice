@@ -9,7 +9,7 @@ fs.readFile(path.join(__dirname,'youtube','text.txt'), 'utf8', (err, data) => {
 console.log("i will be executed first")
 
 //To write into the file
-fs.writeFile(path.join(__dirname,'youtube','text.txt'), 'I wanna be a full stack developer', (err) => {
+fs.writeFile(path.join(__dirname,'youtube','write.txt'), 'welcome to node ja', (err) => {
   if (err) throw err;
   console.log("write operation successful!!!!");
 })
