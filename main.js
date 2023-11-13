@@ -13,10 +13,15 @@ fs.writeFile(path.join(__dirname,'youtube','write.txt'), 'welcome to node ja', (
   if (err) throw err;
   console.log("write operation successful!!!!");
   // To update file
-  fs.appendFile(path.join(__dirname,'youtube','write.txt'), '\n\n welcome to node ja', (err) => {
+  fs.appendFile(path.join(__dirname,'youtube','append.txt'), '\n\n welcome to node ja', (err) => {
     if (err) throw err;
     console.log("updated successful!!!!");
   })
+  //To rename the file
+    fs.rename(path.join(__dirname,'youtube','append.txt'), path.join(__dirname,'youtube','rename.txt') , (err) => {
+      if (err) throw err;
+      console.log("renamed successful!!!!");
+    })
 })
 
 
